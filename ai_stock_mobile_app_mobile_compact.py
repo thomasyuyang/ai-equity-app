@@ -42,9 +42,9 @@ st.markdown(
 )
 
 DEFAULT_WATCHLIST = [
-    "VUG", "NVDA", "SMH", "VGT", "QQQM", "VOO", "ADBE",
-    "AMD", "AVGO", "MSFT", "META", "GOOGL", "ETSY",
-    "TSM", "MU", "ARM", "OXY", "MO", "HRL"
+    "NVDA", "SMH", "VGT", 
+    "MSFT", "META", "GOOGL",
+    "TSM", "MO",
 ]
 
 
