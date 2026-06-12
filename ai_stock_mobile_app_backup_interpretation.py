@@ -9,7 +9,16 @@ import plotly.graph_objects as go
 import streamlit as st
 import yfinance as yf
 
-st.set_page_config(page_title="AI Stock Mobile", page_icon="📈", layout="centered")
+# below is old version line
+# st.set_page_config(page_title="AI Stock Mobile", page_icon="📈", layout="centered")
+
+from PIL import Image
+icon = Image.open("stock_icon_512.png")
+st.set_page_config(
+    page_title="Thomas AI Stock",
+    page_icon=icon,
+    layout="centered"
+)
 
 DEFAULT_WATCHLIST = [
     "NVDA", "SMH", "VGT",
@@ -467,8 +476,11 @@ Best intraday windows to check: **10:30–11:30 ET** and **2:00–3:30 ET**.
                 fig.update_layout(height=360, margin=dict(l=10, r=10, t=30, b=10), yaxis_title="Annualized volatility %", xaxis_title="Time")
                 st.plotly_chart(fig, use_container_width=True, key=f"vol_chart_{key_prefix}_{ticker}_{interval_label}")
 
+# below is old version
+# st.title("📈 AI Stock Mobile")
 
-st.title("📈 AI Stock Mobile")
+st.title("🤖 Thomas AI Stock")  
+
 st.caption("Mobile-friendly AI stock/ETF setup scanner, buy timing, risk, and volatility chart")
 st.warning("Educational/research tool only. Not financial advice. Confirm with Yahoo/Fidelity before trading.")
 
